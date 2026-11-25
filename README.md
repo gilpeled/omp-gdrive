@@ -23,11 +23,12 @@ OMP accepts `github:user/repo` plugin sources. Restart OMP if the current sessio
 
 Run `/gdrive login` in OMP.
 
-Like OMP's own `/login openai-codex`, it opens a sign-in dialog and tries to open your browser. The dialog shows:
+It prints the sign-in links and tries to open your browser:
 
 - the full ChatGPT authorization URL
 - a local shortcut, `http://localhost:1455/launch`, which works on this machine only
-- a paste field
+
+Then it asks for the redirect URL or authorization code.
 
 Pick the same account and ChatGPT workspace as in step 1.
 
@@ -37,7 +38,7 @@ On a headless or remote host (SSH, containers):
 
 1. Open the full authorization URL in a browser on any machine.
 2. After you sign in, the browser lands on `http://localhost:1455/auth/callback?code=…`, which won't load.
-3. Copy that whole URL from the address bar and paste it into the dialog. The authorization code alone also works.
+3. Copy that whole URL from the address bar and paste it into the prompt. The authorization code alone also works.
 
 Other commands:
 
